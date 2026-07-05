@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>プライバシーポリシー</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f8fa;
+      --text: #1f2328;
+      --muted: #656d76;
+      --border: #d0d7de;
+      --accent: #2f6feb;
+      --maxw: 720px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --surface: #161b22;
+        --text: #e6edf3;
+        --muted: #9198a1;
+        --border: #30363d;
+        --accent: #6ea8ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 48px 20px 96px;
+    }
+    main { word-wrap: break-word; overflow-wrap: break-word; }
+    h1 {
+      font-size: 1.9rem;
+      line-height: 1.3;
+      margin: 0 0 1.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--border);
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin: 2.4rem 0 0.9rem;
+    }
+    h3 { font-size: 1.1rem; margin: 1.8rem 0 0.6rem; }
+    p { margin: 0.9rem 0; }
+    ul, ol { margin: 0.9rem 0; padding-left: 1.5rem; }
+    li { margin: 0.4rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { font-weight: 600; }
+    code {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.1em 0.4em;
+      font-size: 0.88em;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding: 0.2rem 1rem;
+      border-left: 4px solid var(--border);
+      color: var(--muted);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+    footer {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px 48px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main>
+      <h1>プライバシーポリシー</h1>
+      <p><strong>最終更新日: 2026年7月6日</strong></p>
+      <p>本プライバシーポリシーは、Mezaru（以下「本アプリ」といいます）における利用者の情報の取り扱いについて定めるものです。本アプリをご利用いただく前に、本ポリシーをお読みください。</p>
+      <h2>基本方針</h2>
+      <p>本アプリは、指定した時間範囲の間、一定間隔でアラームを鳴らすことを目的としたアプリです。<strong>本アプリは、利用者の個人情報を収集・送信しません。</strong> アプリの設定内容はすべて利用者の端末内でのみ処理・保存されます。</p>
+      <h2>収集する情報</h2>
+      <p>本アプリは、氏名・メールアドレス・電話番号・位置情報・連絡先などの個人を特定できる情報を<strong>一切収集しません</strong>。</p>
+      <p>本アプリが端末内に保存する情報は、以下のアプリ設定に限られます。</p>
+      <ul><li>アラームの開始時刻・終了時刻・鳴動間隔などの設定</li><li>アラーム音（通常音・最後の1回の音）の選択内容</li></ul>
+      <p>これらの情報は利用者の端末内にのみ保存され、外部のサーバーや第三者に送信されることはありません。</p>
+      <h2>情報の外部送信について</h2>
+      <p>本アプリはインターネット通信を行う権限（<code>INTERNET</code> 権限）を保有しておらず、いかなる情報も外部へ送信しません。広告の配信、アクセス解析ツールの利用、第三者へのデータ提供のいずれも行いません。</p>
+      <h2>端末の権限について</h2>
+      <p>本アプリは、アラーム機能を提供するために以下の権限を使用します。これらは端末上での動作のために利用されるものであり、個人情報の収集を目的とするものではありません。</p>
+      <ul><li><strong>正確なアラーム（<code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code>）</strong> — 指定した時刻に正確にアラームを鳴らすために使用します。</li><li><strong>通知の表示（<code>POST_NOTIFICATIONS</code>）</strong> — アラームの稼働状態や発火を通知するために使用します。</li><li><strong>全画面通知（<code>USE_FULL_SCREEN_INTENT</code>）</strong> — ロック画面でもアラーム画面を全画面表示するために使用します。</li><li><strong>画面の点灯・ロック解除（<code>WAKE_LOCK</code> / <code>TURN_SCREEN_ON</code> / <code>DISABLE_KEYGUARD</code>）</strong> — アラーム発火時に画面を点灯させるために使用します。</li><li><strong>フォアグラウンドサービス（<code>FOREGROUND_SERVICE</code> ほか）</strong> — アラームのスケジュールをバックグラウンドで維持するために使用します。</li></ul>
+      <h2>情報の保存期間と削除</h2>
+      <p>アプリ設定は利用者が変更・削除するまで端末内に保存されます。本アプリをアンインストールすると、保存されたすべての設定情報は端末から削除されます。</p>
+      <h2>児童のプライバシー</h2>
+      <p>本アプリは特定の年齢層を対象としたものではなく、個人情報を収集しないため、児童から個人情報を取得することはありません。</p>
+      <h2>プライバシーポリシーの変更</h2>
+      <p>本ポリシーの内容は、法令の変更やアプリの機能追加に応じて予告なく変更されることがあります。変更後のポリシーは本ページに掲載した時点で効力を生じるものとします。</p>
+      <h2>お問い合わせ</h2>
+      <p>本ポリシーに関するお問い合わせは、以下の連絡先までお願いいたします。</p>
+      <ul><li>メールアドレス: dev@harutiro.net</li></ul>
+    </main>
+  </div>
+  <footer>© 2026 NewAlerm</footer>
+</body>
+</html>
