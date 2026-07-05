@@ -7,23 +7,20 @@ import net.harutiro.newalerm.features.alarm.entities.AlarmConfig
 /**
  * アラーム予定の開始/キャンセルと、現在稼働中の予定状態を扱うリポジトリ。
  *
- * 稼働状態はフォアグラウンドサービス（[net.harutiro.newalerm.service.AlarmForegroundService]）が
- * 唯一の source of truth であり、本リポジトリはその状態をプロセス内で共有・観測するための窓口。
+ * 稼働状態の source of truth は永続ストア（[ActiveScheduleStore]）で、
+ * 本リポジトリはそれをプロセス内の [StateFlow] としてミラーし、UI へ観測させる。
  */
 interface AlarmRepository {
 
     /** 現在稼働中のアラーム予定。null の場合はアイドル（未予定）。 */
     val activeConfig: StateFlow<AlarmConfig?>
 
-    /** 予定を開始する（フォアグラウンドサービスを起動）。 */
+    /** 予定を開始する（AlarmManager へ登録し、状態を永続化・通知を表示）。 */
     fun startSchedule(context: Context, config: AlarmConfig)
 
-    /** 稼働中の予定をキャンセルする（サービスへ停止指示）。 */
+    /** 稼働中の予定をキャンセルする（登録解除・永続状態のクリア・通知の消去）。 */
     fun cancelSchedule(context: Context)
 
-    /** サービスから稼働開始を通知する内部用。 */
-    fun notifyActivated(config: AlarmConfig)
-
-    /** サービスから稼働終了を通知する内部用。 */
-    fun notifyCleared()
+    /** 永続化された稼働状態を読み出して復元する（プロセス起動時に呼ぶ）。 */
+    fun restore(context: Context)
 }
